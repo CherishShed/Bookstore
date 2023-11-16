@@ -12,13 +12,13 @@ mongoose
 export interface bookType extends Document {
   title: string
   author: string
-  publishDate: number
+  publishYear: number
 }
 const bookSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     author: { type: String, required: true },
-    publishDate: { type: Number, required: true },
+    publishYear: { type: Number, required: true },
   },
   { timestamps: true }
 )

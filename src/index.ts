@@ -1,6 +1,6 @@
 import express from 'express'
 import 'dotenv/config'
-import BookController from 'controllers/book.controller'
+import BookController from './controllers/book.controller'
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
