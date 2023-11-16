@@ -25,6 +25,9 @@ dependencies:
     version: 7.6.3
 
 devDependencies:
+  '@types/dotenv':
+    specifier: ^8.2.0
+    version: 8.2.0
   '@types/node':
     specifier: ^20.8.9
     version: 20.8.9
@@ -34,6 +37,9 @@ devDependencies:
   '@typescript-eslint/parser':
     specifier: ^6.9.0
     version: 6.9.0(eslint@8.52.0)(typescript@5.2.2)
+  dotenv:
+    specifier: ^16.3.1
+    version: 16.3.1
   eslint:
     specifier: ^8.52.0
     version: 8.52.0
@@ -233,6 +239,13 @@ packages:
     dependencies:
       '@types/node': 20.8.9
     dev: false
+
+  /@types/dotenv@8.2.0:
+    resolution: {integrity: sha512-ylSC9GhfRH7m1EUXBXofhgx4lUWmFeQDINW5oLuS+gxWdfUeW4zJdeVTYVkexEW+e2VUvlZR2kGnGGipAWR7kw==}
+    deprecated: This is a stub types definition. dotenv provides its own type definitions, so you do not need this installed.
+    dependencies:
+      dotenv: 16.3.1
+    dev: true
 
   /@types/express-serve-static-core@4.17.39:
     resolution: {integrity: sha512-BiEUfAiGCOllomsRAZOiMFP7LAnrifHpt56pc4Z7l9K6ACyN06Ns1JLMBxwkfLOjJRlSf06NwWsT7yzfpaVpyQ==}
@@ -925,6 +938,11 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+    dev: true
+
+  /dotenv@16.3.1:
+    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+    engines: {node: '>=12'}
     dev: true
 
   /ecdsa-sig-formatter@1.0.11:
