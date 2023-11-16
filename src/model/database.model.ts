@@ -2,13 +2,29 @@ import mongoose, { Document } from 'mongoose'
 import 'dotenv/config'
 
 mongoose
-  .connect(process.env.CONNECTION_STRING!, { dbName: 'main' })
+  .connect(process.env.CONNECTION_STRING!, {
+    dbName: 'main',
+  })
   .then(() => {
     console.log('Connection Succeeded')
   })
   .catch(err => {
     console.log(`An error occurred ${err}`)
   })
+
+mongoose.connection.on('error', err => {
+  console.log(`An error occurred: ${err},\n...reconnecting`)
+  mongoose
+    .connect(process.env.CONNECTION_STRING!, {
+      dbName: 'main',
+    })
+    .then(() => {
+      console.log('Connection Succeeded')
+    })
+    .catch(err => {
+      console.log(`An error occurred ${err}`)
+    })
+})
 export interface bookType extends Document {
   title: string
   author: string
