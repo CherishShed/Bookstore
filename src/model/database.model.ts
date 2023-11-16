@@ -10,12 +10,17 @@ mongoose
     console.log(`An error occurred ${err}`)
   })
 export interface bookType extends Document {
-  name: string
-  number: number
+  title: string
+  author: string
+  publishDate: number
 }
-const bookSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  number: { type: Number, required: true },
-})
+const bookSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    author: { type: String, required: true },
+    publishDate: { type: Number, required: true },
+  },
+  { timestamps: true }
+)
 
 export const Book = mongoose.model<bookType>('Book', bookSchema)
