@@ -2,7 +2,7 @@ import mongoose, { Document } from 'mongoose'
 import 'dotenv/config'
 
 mongoose
-  .connect(process.env.CONNECTION_STRING!)
+  .connect(process.env.CONNECTION_STRING!, { dbName: 'main' })
   .then(() => {
     console.log('Connection Succeeded')
   })
