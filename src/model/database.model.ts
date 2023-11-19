@@ -28,7 +28,7 @@ mongoose.connection.on('error', err => {
 export interface bookType extends Document {
   title: string
   author: string
-  publishYear: number
+  publishYear: string
 }
 const bookSchema = new mongoose.Schema(
   {
